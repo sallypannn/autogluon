@@ -16,3 +16,8 @@ import logging as __logging
 __logging.getLogger("distributed.utils_perf").setLevel(__logging.ERROR)
 __logging.getLogger("distributed.logging.distributed").setLevel(__logging.ERROR)
 __logging.getLogger("distributed.worker").setLevel(__logging.ERROR)
+
+try:
+    from .version import __version__
+except ImportError:
+    pass
